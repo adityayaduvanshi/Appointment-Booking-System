@@ -5,10 +5,7 @@ import Image from 'next/image';
 
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import useLoginModal from '@/app/hooks/useLoginModal';
-import { AiOutlineShoppingCart, AiOutlineHeart } from 'react-icons/ai';
 
-import { signOut } from 'next-auth/react';
-import Avatar from '../Avatar';
 import Categories from './Categories';
 import { useRouter } from 'next/navigation';
 import { useCallback } from 'react';
@@ -54,37 +51,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
         <div>
           <Search />
         </div>
-        {/* <div className="hidden sm:flex  flex-row  justify-between items-center gap-x-3">
-          {navBarItems.map((item) => (
-            <Link className={`hover:text-white`} key={item.id} href={item.link}>
-              {item.name}
-            </Link>
-          ))}
-          <button onClick={onBusiness}>Bussiness Login</button>
-          {currentUser ? (
-            <>
-              <AiOutlineHeart size={25} />
-              <AiOutlineShoppingCart size={25} />
-              <Avatar src={currentUser?.image} />
-              <div className="cursor-pointer" onClick={() => signOut()}>
-                Sign Out
-              </div>
-            </>
-          ) : (
-            <>
-              <button className="cursor-pointer" onClick={loginModal.onOpen}>
-                Login
-              </button>
-              <button
-                className="bg-[#EA8933] rounded-sm text-white py-[6px] px-[12px] outline-none border-none
-"
-                onClick={registerModal.onOpen}
-              >
-                Sign Up
-              </button>
-            </>
-          )}
-        </div> */}
+
         <UserMenu currentUser={currentUser} />
       </div>
       <Categories />

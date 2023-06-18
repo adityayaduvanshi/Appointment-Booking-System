@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { CiLocationOn } from 'react-icons/ci';
 import useCountries from '@/app/hooks/useCountries';
 import { SafeListing, SafeReservation, SafeUser } from '@/app/types';
-import { Reservation } from '@prisma/client';
 import { useRouter } from 'next/navigation';
 import { useCallback, useMemo } from 'react';
 import { format } from 'date-fns';
