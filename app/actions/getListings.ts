@@ -33,22 +33,22 @@ export default async function getListings(params: IlistingsParams) {
       query.locationValue = locationValue;
     }
 
-    if (startDate) {
-      query.NOT = {
-        reservations: {
-          some: {
-            OR: [
-              {
-                startDate: { lte: startDate },
-              },
-              {
-                startDate: { lte: startDate },
-              },
-            ],
-          },
-        },
-      };
-    }
+    // if (startDate) {
+    //   query.NOT = {
+    //     reservations: {
+    //       some: {
+    //         OR: [
+    //           {
+    //             startDate: { lte: startDate },
+    //           },
+    //           {
+    //             startDate: { lte: startDate },
+    //           },
+    //         ],
+    //       },
+    //     },
+    //   };
+    // }
 
     const listings = await prisma.listing.findMany({
       where: query,

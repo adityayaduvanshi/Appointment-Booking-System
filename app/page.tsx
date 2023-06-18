@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import ClientOnly from './ClientOnly';
 import Container from './components/Container';
 import EmptyState from './components/EmptyState';
