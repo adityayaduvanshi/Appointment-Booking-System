@@ -45,10 +45,7 @@ const UpcomingClient: React.FC<UpcomingClientProps> = ({
 
   return (
     <Container>
-      <Heading
-        title="Trips"
-        subtitle="Where you've been and where you're going"
-      />
+      <Heading title="Upcoming" subtitle="Your upcoming appointments" />
       <div
         className="
           mt-10
