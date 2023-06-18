@@ -10,7 +10,7 @@ export interface IListingsParams {
 
 export default async function getListings(params: IListingsParams) {
   try {
-    const { category, userId, startDate, startTime, locationValue } = params;
+    const { category, userId, startDate, locationValue } = params;
 
     let query: any = {};
 

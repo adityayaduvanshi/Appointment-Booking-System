@@ -51,13 +51,7 @@ const ListingHead: React.FC<ListingHeadProps> = ({
             mins ? showMins : ''
           } minutes`}</div>
           <div className="text-red-800 font-bold text-lg">
-            {/* {category && (
-              <ListingCategory
-                icon={category.icon}
-                label={category?.label}
-                description={category?.description}
-              />
-            )} */}
+        
             {category?.label}
           </div>
           <div className="text-white mt-2 flex items-center gap-1 font-normal text-md">

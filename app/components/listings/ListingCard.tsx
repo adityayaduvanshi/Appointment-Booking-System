@@ -83,7 +83,9 @@ const ListingCard: React.FC<ListingCardProps> = ({
         <div className=" font-semibold text-lg">
           {reservationDate || data.category}
         </div>
-        <div className="font-semibold text-neutral-500">{data.title}</div>
+        <div className="font-semibold text-neutral-500">
+          {data.title}
+        </div>
         <div className=" text-sm flex gap-2">
           <CiLocationOn size={15} /> {location?.label}, {location?.region}
         </div>

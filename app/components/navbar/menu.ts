@@ -5,19 +5,19 @@ export const menu = [
     submenu: [
       {
         title: 'Personal Trainers',
-        url: 'personal-trainers',
+        url: 'personaltrainers',
       },
       {
         title: 'Professional Therapy',
-        url: 'professional-therapy',
+        url: 'professionaltherapy',
       },
       {
         title: 'Gym Membership',
-        url: 'gym-membership',
+        url: 'gymmembership',
       },
       {
         title: 'Club Membership',
-        url: 'club-membership',
+        url: 'clubmembership',
       },
       {
         title: 'Zumba',
@@ -30,20 +30,20 @@ export const menu = [
     url: '',
     submenu: [
       {
-        title: 'Gp',
-        url: 'gp',
+        title: 'Gp s',
+        url: 'gps',
       },
       {
         title: 'Dentists',
         url: 'dentists',
       },
       {
-        title: 'Dental Surgeries',
-        url: 'dental-surgeries',
+        title: 'Dental Surgery',
+        url: 'dental surgery',
       },
       {
-        title: 'Medical Specialists',
-        url: 'medical-specialists',
+        title: 'Medical Specialist',
+        url: 'medicalspecialists',
       },
     ],
   },
@@ -53,15 +53,15 @@ export const menu = [
     submenu: [
       {
         title: 'Pet Grooming',
-        url: 'pet-grooming',
+        url: 'petgrooming',
       },
       {
         title: 'Pet Sitting',
-        url: 'pet-sitting',
+        url: 'petsitting',
       },
       {
-        title: 'HandyMan services',
-        url: 'handyMan-services',
+        title: 'Handyman Service',
+        url: 'handyManservices',
       },
       {
         title: 'Gardening',
@@ -69,19 +69,19 @@ export const menu = [
       },
       {
         title: 'House Painting',
-        url: 'house-painting',
+        url: 'housepainting',
       },
       {
-        title: 'Repair Services',
-        url: 'repair-services',
+        title: 'Repair Service',
+        url: 'repairservices',
       },
       {
         title: 'Movers',
         url: 'movers',
       },
       {
-        title: 'Cleaning Services',
-        url: 'cleanings-services',
+        title: 'Cleaning Service',
+        url: 'cleaningsservices',
       },
     ],
   },
@@ -91,31 +91,31 @@ export const menu = [
     submenu: [
       {
         title: 'General Classes',
-        url: 'general-classes',
+        url: 'generalclasses',
       },
       {
         title: 'Tutoring Coaching',
-        url: 'tutoring-coaching',
+        url: 'tutoringcoaching',
       },
       {
-        title: 'HandyMan services',
-        url: 'handyMan-services',
+        title: 'Coaching Classes',
+        url: 'coaching classes',
       },
       {
         title: 'Baking Classes',
-        url: 'baking-classes',
+        url: 'bakingclasses',
       },
       {
         title: 'Music Classes',
-        url: 'music-classes',
+        url: 'musicclasses',
       },
       {
-        title: 'Tutions',
+        title: 'Tution',
         url: 'tutions',
       },
       {
-        title: 'Cooking classes',
-        url: 'cooking-classes',
+        title: 'Cooking class',
+        url: 'cookingclasses',
       },
     ],
   },
@@ -124,16 +124,16 @@ export const menu = [
     url: '',
     submenu: [
       {
-        title: 'Hair Salons',
-        url: 'hair-salons',
+        title: 'Hair Salon',
+        url: 'hair salons',
       },
       {
-        title: 'Nail Salons',
-        url: 'nail-salons',
+        title: 'Nail Salon',
+        url: 'nailsalons',
       },
       {
-        title: 'Massage Services',
-        url: 'massage-servicess',
+        title: 'Massage Service',
+        url: 'massageservicess',
       },
       {
         title: 'Spa',

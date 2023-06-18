@@ -39,7 +39,9 @@ const Search = () => {
             font-semibold 
             px-6
           "
-        ></div>
+        >
+          Search by location
+        </div>
         <div
           className="
             hidden 

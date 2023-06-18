@@ -19,8 +19,6 @@ export async function POST(request: Request) {
     time,
     featureOne,
     featureTwo,
-    // bathroomCount,
-    // guestCount,
     location,
     price,
   } = body;
@@ -40,8 +38,6 @@ export async function POST(request: Request) {
       time,
       featureOne,
       featureTwo,
-      //   bathroomCount,
-      //   guestCount,
       locationValue: location.value,
       price: parseInt(price, 10),
       userId: currentUser.id,
