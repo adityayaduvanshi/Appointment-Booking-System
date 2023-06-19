@@ -10,6 +10,17 @@ import useCountries from '@/app/hooks/useCountries';
 
 const Search = () => {
   const searchModal = useSearchModal();
+  const params = useSearchParams();
+  const { getByValue } = useCountries();
+
+  const locationValue = params?.get('locationValue');
+
+  const locationLabel = useMemo(() => {
+    if (locationValue) {
+      return getByValue(locationValue as string)?.label;
+    }
+    return 'Search by location';
+  }, [getByValue, locationValue]);
 
   return (
     <div
@@ -40,7 +51,7 @@ const Search = () => {
             px-6
           "
         >
-          Search by location
+          {locationLabel}
         </div>
         <div
           className="

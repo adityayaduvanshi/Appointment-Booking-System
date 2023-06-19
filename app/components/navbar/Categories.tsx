@@ -2,13 +2,31 @@
 
 import { usePathname, useSearchParams } from 'next/navigation';
 
-import { GiMedicalPack } from 'react-icons/gi';
+import {
+  GiMedicalPack,
+  GiCupcake,
+  GiGardeningShears,
+  GiHairStrands,
+  GiMedicalPackAlt,
+  GiSittingDog,
+  GiAutoRepair,
+} from 'react-icons/gi';
 import { IoIosFitness } from 'react-icons/io';
-import { AiOutlineDown } from 'react-icons/ai';
-
-import { BiHappyHeartEyes } from 'react-icons/bi';
+import { AiOutlineFormatPainter } from 'react-icons/ai';
+import { CgGym } from 'react-icons/cg';
+import { GrYoga } from 'react-icons/gr';
+import {
+  MdCleaningServices,
+  MdRememberMe,
+  MdOutlineHandyman,
+  MdOutlineMan3,
+  MdOutlineMusicNote,
+} from 'react-icons/md';
+import { SiGoogleclassroom } from 'react-icons/si';
+import { TbDental, TbMassage, TbHandThreeFingers, TbDog } from 'react-icons/tb';
 import { RiPsychotherapyFill } from 'react-icons/ri';
-import { BsFillBookFill, BsFillHouseAddFill } from 'react-icons/bs';
+import { BsFillBookFill } from 'react-icons/bs';
+import { FaBookReader } from 'react-icons/fa';
 
 import { menu } from './menu';
 import MenuItems from './MenuItem';
@@ -21,91 +39,91 @@ export const categories = [
   },
   {
     label: 'Professional Therapy',
-    icon: GiMedicalPack,
-    description: 'Get Medical advice from professionals',
+    icon: RiPsychotherapyFill,
+    description: 'Professional Therapy',
   },
   {
     label: 'Gym Membership',
-    icon: BiHappyHeartEyes,
-    description: 'Get beauty treatments',
+    icon: CgGym,
+    description: 'Gym Membership',
   },
   {
     label: 'Club Membership',
-    icon: BsFillHouseAddFill,
-    description: 'Household',
+    icon: MdRememberMe,
+    description: 'Club Membership',
   },
   {
     label: 'Zumba',
-    icon: BsFillBookFill,
-    description: 'Join classes online/offline',
+    icon: GrYoga,
+    description: 'Zumba',
   },
   { label: 'Gp s', icon: RiPsychotherapyFill, description: 'Therapy' },
-  { label: 'Dentists', icon: RiPsychotherapyFill, description: 'Therapy' },
+  { label: 'Dentists', icon: TbDental, description: 'Dentists' },
   {
     label: 'Dental Surgery',
-    icon: RiPsychotherapyFill,
-    description: 'Therapy',
+    icon: TbDental,
+    description: 'Dental Surgery',
   },
   {
     label: 'Medical Specialist',
-    icon: RiPsychotherapyFill,
-    description: 'Therapy',
+    icon: GiMedicalPackAlt,
+    description: 'Medical Specialist',
   },
-  { label: 'Pet Grooming', icon: RiPsychotherapyFill, description: 'Therapy' },
-  { label: 'Pet Sitting', icon: RiPsychotherapyFill, description: 'Therapy' },
+  { label: 'Pet Grooming', icon: TbDog, description: 'Pet grooming' },
+  { label: 'Pet Sitting', icon: GiSittingDog, description: 'Pet sitting' },
   {
     label: 'Handyman Service',
-    icon: RiPsychotherapyFill,
+    icon: MdOutlineHandyman,
     description: 'Therapy',
   },
-  { label: 'Gardening', icon: RiPsychotherapyFill, description: 'Therapy' },
+  { label: 'Gardening', icon: GiGardeningShears, description: 'Gardening' },
   {
     label: 'House Painting',
-    icon: RiPsychotherapyFill,
-    description: 'Therapy',
+    icon: AiOutlineFormatPainter,
+    description: 'House Painting',
   },
   {
     label: 'Repair Service',
-    icon: RiPsychotherapyFill,
-    description: 'Therapy',
+    icon: GiAutoRepair,
+    description: 'Repair',
   },
 
-  { label: 'Movers', icon: RiPsychotherapyFill, description: 'Therapy' },
+  { label: 'Movers', icon: MdOutlineMan3, description: 'Movers' },
   {
     label: 'Cleaing Service',
-    icon: RiPsychotherapyFill,
-    description: 'Therapy',
+    icon: MdCleaningServices,
+    description: 'Cleaing Service',
   },
   {
     label: 'General Classes',
-    icon: RiPsychotherapyFill,
-    description: 'Therapy',
+    icon: BsFillBookFill,
+    description: 'General Classes',
   },
   {
     label: 'Tutoring Coaching',
-    icon: RiPsychotherapyFill,
-    description: 'Therapy',
+    icon: BsFillBookFill,
+    description: 'Tutoring Coaching',
   },
   {
     label: 'Baking Classes',
-    icon: RiPsychotherapyFill,
+    icon: GiCupcake,
     description: 'Therapy',
   },
-  { label: 'Music Classes', icon: RiPsychotherapyFill, description: 'Therapy' },
-  { label: 'Tution', icon: RiPsychotherapyFill, description: 'Therapy' },
   {
     label: 'Coaching Classes',
-    icon: RiPsychotherapyFill,
-    description: 'Therapy',
+    icon: SiGoogleclassroom,
+    description: 'Coaching Class',
   },
-  { label: 'Hair Salon', icon: RiPsychotherapyFill, description: 'Therapy' },
-  { label: 'Nail Salon', icon: RiPsychotherapyFill, description: 'Therapy' },
+  { label: 'Music Classes', icon: MdOutlineMusicNote, description: 'Music' },
+  { label: 'Tution', icon: FaBookReader, description: 'Tution' },
+  { label: 'Hair Salon', icon: GiHairStrands, description: 'Hair Salon' },
+  { label: 'Nail Salon', icon: TbHandThreeFingers, description: 'Nail' },
   {
     label: 'Massage Service',
-    icon: RiPsychotherapyFill,
-    description: 'Therapy',
+    icon: TbMassage,
+    description: 'Massage Service',
   },
-  { label: 'Spa', icon: RiPsychotherapyFill, description: 'Therapy' },
+  { label: 'Spa', icon: TbMassage, description: 'Spa' },
 ];
 
 const Categories = () => {
