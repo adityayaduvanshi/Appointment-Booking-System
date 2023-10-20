@@ -17,7 +17,7 @@ const AvailableHours: React.FC<AvailableHoursProps> = memo(
 
     const handleTimeClick = (time: Date) => {
       setSelectedTime(time);
-      onTimeSelect(time); // Invoke the callback function in the parent with the selected time
+      onTimeSelect(time); 
     };
 
     return (

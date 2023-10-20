@@ -28,6 +28,7 @@ import 'react-clock/dist/Clock.css';
 
 import { cn } from '../datepicker/libs/utils';
 import Button from '../Button';
+import { Reservation } from '@prisma/client';
 
 interface TimeOption {
   value: string;
@@ -44,6 +45,7 @@ interface ListingReservationProps {
   disableDates: Date[];
   onSelect: (date: Date) => void;
   handleTimeSelect: (time: Date) => void;
+  reserved: Reservation[];
 }
 
 const ListingReservation: React.FC<ListingReservationProps> = ({
@@ -56,6 +58,7 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
   disabled,
   handleTimeSelect,
   disableDates,
+  reserved = [],
 }) => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [selectedTime, setSelectedTime] = useState(new Date());
@@ -131,6 +134,10 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
         <div className="flex flex-col items-center gap-2 mt-4 p-4">
           <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6  text-md gap-2">
             {freeTimes.map((hour, hourIdx) => {
+              const isDisabled = reserved.some((reservation) =>
+                isSameMinute(parseISO(reservation.startTime), hour)
+              );
+
               return (
                 <div key={hourIdx}>
                   <button
@@ -139,7 +146,8 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
                       'bg-green-200 rounded-lg px-2 text-gray-800 relative hover:border hover:border-green-400 w-[60px] h-[26px]',
                       selectedTime &&
                         isSameMinute(selectedTime, hour) &&
-                        'bg-black text-white'
+                        'bg-black text-white',
+                      isDisabled && 'bg-gray-400 cursor-not-allowed'
                     )}
                     onClick={() => handleTimeClick(hour)}
                   >

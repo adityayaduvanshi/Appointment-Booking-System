@@ -33,7 +33,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
   reserved = [],
 }) => {
   const loginModal = useLoginModal();
-
+  console.log(reserved, 'reserved');
   const router = useRouter();
 
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -161,6 +161,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
               disableDates={disableDates}
               onSelect={handleDateSelect}
               handleTimeSelect={handleTimeSelect}
+              reserved={reserved}
             />
           </div>
         </div>
