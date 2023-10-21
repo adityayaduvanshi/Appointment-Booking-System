@@ -135,7 +135,7 @@ const ListingReservation: React.FC<ListingReservationProps> = ({
           <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6  text-md gap-2">
             {freeTimes.map((hour, hourIdx) => {
               const isDisabled = reserved.some((reservation) =>
-                isSameMinute(parseISO(reservation.startTime), hour)
+                isSameMinute(new Date(reservation.startTime), hour)
               );
 
               return (
