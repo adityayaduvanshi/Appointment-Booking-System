@@ -29,6 +29,7 @@ import 'react-clock/dist/Clock.css';
 import { cn } from '../datepicker/libs/utils';
 import Button from '../Button';
 import { Reservation } from '@prisma/client';
+import { SafeReservation } from '@/app/types';
 
 interface TimeOption {
   value: string;
@@ -45,7 +46,7 @@ interface ListingReservationProps {
   disableDates: Date[];
   onSelect: (date: Date) => void;
   handleTimeSelect: (time: Date) => void;
-  reserved: Reservation[];
+  reserved: SafeReservation[];
 }
 
 const ListingReservation: React.FC<ListingReservationProps> = ({
