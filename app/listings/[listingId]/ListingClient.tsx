@@ -93,6 +93,7 @@ const ListingClient: React.FC<ListingClientProps> = ({
       .then(() => {
         toast.success('Success');
         setDateRange(initialDateRange);
+        router.refresh();
         router.push('/upcoming');
       })
       .catch(() => toast.error('Something went wrong'))
